@@ -1,10 +1,27 @@
-import React from 'react';
+import React from "react";
+import google from "../../assets/google.png";
+import slack from "../../assets/slack.png";
+import dropbox from "../../assets/dropbox.png";
+import shopify from "../../assets/shopify.png";
 import "./brand.scss";
 
-function Brand() {
+const Brand = () => {
   return (
-    <div>Brand</div>
-  )
-}
+    <div className="brand section__padding">
+      <div>
+        <img src={google} alt="google" />
+      </div>
+      <div>
+        <img src={slack} alt="slack" />
+      </div>
+      <div>
+        <img src={dropbox} alt="dropbox" />
+      </div>
+      <div>
+        <img src={shopify} alt="shopify" />
+      </div>
+    </div>
+  );
+};
 
-export default Brand
+export default Brand;

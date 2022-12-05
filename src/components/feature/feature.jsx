@@ -1,9 +1,9 @@
 import React from 'react';
 
-function feature() {
+function Feature() {
   return (
-    <div>feature</div>
+    <div>Feature</div>
   )
 }
 
-export default feature
+export default Feature
