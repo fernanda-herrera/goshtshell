@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "./containers/header/Header";
 import Navbar from "./components/navbar/Navbar";
 import Brand from "./components/brand/Brand";
+import What from "./containers/what/What";
 import Features from "./containers/features/Features";
 import Possibility from "./containers/possibility/Possibility";
 import CTA from "./components/cta/CTA";
@@ -17,7 +18,7 @@ function App() {
         <Header />
       </div>
       <Brand />
-      <WhatGPT3 />
+      <What />
       <Features />
       <Possibility />
       <CTA />

@@ -1,6 +1,5 @@
 import React from 'react'
-import Feature from "../../components/feature/Feature";
-import "./what.scss";
+import "./what.scss"
 
 function What() {
   return (
