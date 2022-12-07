@@ -1,0 +1,26 @@
+@import "../../index.scss";
+
+.btn,
+button {
+  cursor: pointer;
+  padding: 1rem 2rem;
+  font-family: $font-family;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 10px;
+  border: 0;
+  outline: none;
+  background: #ff4820;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+
+  @media all and (max-width: 1000px) {
+    padding: 0.5rem 1rem;
+    font-size: 0.9375rem;
+  }
+
+  &:hover {
+    background: #aa3015;
+    transition: all 0.2s ease-in-out;
+  }
+}

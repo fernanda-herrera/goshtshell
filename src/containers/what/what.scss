@@ -1,0 +1,169 @@
+@import "../../App.scss";
+@import "../../index.scss";
+
+.whatgpt3, .possibility__content{
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+  background: $color-footer;
+  background: -moz-radial-gradient(
+    circle at 30% -100%,
+    #042c54 25%,
+    rgba(4, 44, 84, 1) 85%,
+    rgba(27, 120, 222, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle at 30% -100%,
+    #042c54 25%,
+    rgba(4, 44, 84, 1) 85%,
+    rgba(27, 120, 222, 1) 100%
+  );
+  background: -o-radial-gradient(
+    circle at 30% -100%,
+    #042c54 25%,
+    rgba(4, 44, 84, 1) 85%,
+    rgba(27, 120, 222, 1) 100%
+  );
+  background: -ms-radial-gradient(
+    circle at 30% -100%,
+    #042c54 25%,
+    rgba(4, 44, 84, 1) 85%,
+    rgba(27, 120, 222, 1) 100%
+  );
+  background: radial-gradient(
+    circle at 30% -100%,
+    #042c54 25%,
+    rgba(4, 44, 84, 1) 85%,
+    rgba(27, 120, 222, 1) 100%
+  );
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border: 2px solid $color-bg;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    transition: all 0.3s ease-in-out;
+  }
+
+  @media all and (max-width: $breakpoint-tablet) {
+    padding: 3rem;
+  }
+
+  @media all and (max-width: $breakpoint-mobile) {
+    padding: 2rem;
+  }
+
+  &__feature {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 30px;
+    transition: all 0.2s ease-in-out;
+
+    @media all and (max-width: $breakpoint-tablet-lg) {
+      display: block;
+    }
+
+    .gradient-border {
+      width: 40px;
+      height: 4px;
+      content: "";
+      display: block;
+      background: $gradient-bar;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover {
+      .gradient-border {
+        width: 60px;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+
+    &__heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem 0 8rem;
+
+      @media all and (max-width: $breakpoint-tablet-lg) {
+        display: block;
+        padding: 2rem 0 6rem;
+      }
+
+      h1 {
+        font-family: $font-family;
+        font-size: 2.5rem;
+        font-weight: 800;
+        max-width: 550px;
+
+        @media all and (max-width: $breakpoint-tablet-lg) {
+          padding-bottom: 3rem;
+        }
+
+        @media all and (max-width: $breakpoint-tablet) {
+          font-size: 2rem;
+        }
+      }
+
+      p {
+        cursor: pointer;
+        font-family: $font-family;
+        font-size: 1.125rem;
+        color: $color-subtext;
+        border-bottom: 1px solid $color-subtext;
+        padding-bottom: 2px;
+        width: fit-content;
+        transition: all 0.2 ease-in-out;
+
+        @media all and (max-width: $breakpoint-tablet) {
+          font-size: 1rem;
+        }
+
+        &:hover {
+          border-bottom: 1px solid $color-footer;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+    }
+
+    &__content {
+      h1 {
+        font-family: $font-family;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #fff;
+        padding: 1rem 0;
+      }
+
+      p {
+        font-family: $font-family;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.6;
+        color: $color-text;
+        max-width: 700px;
+        padding: 1rem 0 2rem;
+      }
+    }
+  }
+
+  &__features__container__single {
+    display: flex;
+    gap: 4rem;
+
+    @media all and (max-width: $breakpoint-tablet) {
+      display: block;
+    }
+
+    .whatgpt3__feature {
+      flex-direction: column;
+
+      @media all and (max-width: $breakpoint-tablet) {
+        &:not(:last-child) {
+          padding-bottom: 3rem;
+        }
+      }
+    }
+  }
+}

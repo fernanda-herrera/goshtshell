@@ -1,0 +1,61 @@
+@import "../../App.scss";
+
+.cta {
+  cursor: pointer;
+  background: $gradient-bar;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  top: 0;
+  transform: scale(1);
+  border: 2px solid $color-bg;
+  transition: all 0.3s ease-in-out;
+
+  @media all and (max-width: $breakpoint-tablet-lg) {
+    flex-direction: column;
+  }
+
+  &:hover {
+    top: -20px;
+    transform: scale(1.0125);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__content {
+    @media all and (max-width: $breakpoint-tablet-lg) {
+      text-align: center;
+    }
+
+    p {
+      font-family: $font-family;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #000;
+      padding-bottom: 1rem;
+    }
+
+    h3 {
+      font-family: $font-family;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #000;
+      max-width: 700px;
+      letter-spacing: -0.04em;
+
+      @media all and (max-width: $breakpoint-tablet) {
+        font-size: 1.5rem;
+        padding-bottom: 2rem;
+      }
+    }
+  }
+
+  &__button {
+    button {
+      background: #000;
+      border-radius: 50px;
+    }
+  }
+}

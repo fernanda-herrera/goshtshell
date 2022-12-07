@@ -1,0 +1,142 @@
+@import "../../index.scss";
+@import "../../components/button/button.scss";
+
+%header-link {
+  font-family: $font-family;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  @media all and (max-width: 980px) {
+    font-size: 0.9375rem;
+  }
+
+  &:hover {
+    color: #ff4820;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 4%;
+  position: sticky;
+  top: 0;
+
+  @media all and (max-width: $breakpoint-tablet) {
+    padding: 2rem 5%;
+  }
+
+  &__links {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__logo {
+      margin-right: 2rem;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        opacity: 0.8;
+        transition: all 0.2s ease-in-out;
+      }
+
+      img {
+        height: 62px;
+        height: 16px;
+      }
+    }
+
+    &__container {
+      display: flex;
+
+      @media all and (max-width: $breakpoint-tablet) {
+        display: none;
+      }
+
+      a {
+        @extend %header-link;
+
+        &:not(:last-child) {
+          margin-right: 2rem;
+
+          @media all and (max-width: 980px) {
+            margin-right: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__sign {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @media all and (max-width: $breakpoint-tablet) {
+      display: none;
+    }
+
+    a {
+      @extend %header-link;
+      margin-right: 2rem;
+
+      @media all and (max-width: 980px) {
+        margin-right: 1.5rem;
+      }
+    }
+  }
+
+  &__menu {
+    display: none;
+    position: relative;
+    margin-left: 1rem;
+
+    @media all and (max-width: $breakpoint-tablet) {
+      display: flex;
+    }
+
+    svg {
+      cursor: pointer;
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      background: $color-footer;
+      padding: 2rem;
+      top: 2rem;
+      right: 0;
+      margin-top: 1rem;
+      min-width: 210px;
+      border-radius: 10px;
+      position: absolute;
+      width: 90vw;
+
+      &__links {
+        display: flex;
+        flex-direction: column;
+
+        a {
+          @extend %header-link;
+          margin: 1rem 0;
+        }
+
+        button {
+          margin-top: 2rem;
+        }
+
+        &__sign {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
