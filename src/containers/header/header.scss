@@ -138,16 +138,13 @@
     
 @keyframes float {
 	0% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
+		transform: translatey(0px) translateZ(-50px);
 	}
 	50% {
-		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
-		transform: translatey(-20px);
+		transform: translatey(-20px) translateZ(-50px);
 	}
 	100% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
+		transform: translatey(0px)translateZ(-50px);
 	}
 }
     @media all and (min-width: 981px) {
@@ -162,3 +159,16 @@
     }
   }
 }
+
+
+@media screen and (max-width: 768px) {
+  *, *:before, *:after {
+  /*CSS transitions*/
+  transition-property: none !important;
+  /*CSS transforms*/
+  transform: none !important;
+  /*CSS animations*/
+  animation: none !important;
+  }
+}
+

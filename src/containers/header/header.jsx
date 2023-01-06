@@ -3,6 +3,7 @@ import people from "../../assets/people.png";
 import ai from "../../assets/ai.png";
 import "./header.scss";
 
+
 const Header = () => {
   return (
     <div className="header section__padding" id="home">
